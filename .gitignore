@@ -120,3 +120,4 @@ output.txt
 *.db
 hist.txt
 venv*
+colors
