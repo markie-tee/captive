@@ -14,7 +14,7 @@
   {% for post in posts %}
   <div class="box">
     <article class="post media">
-      <div class="media-left">
+      <div class="media-left is-hidden">
         <figure class="image is-64x64">
           <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
         </figure>
@@ -22,7 +22,7 @@
       <div class="media-content">
         <div class="content">
           <p>
-            <h1>{{ post['title'] }}</h1>
+            <h2>{{ post['title'] }}</h2>
             <div class="block">
             {{ post['body'] }}
             </div>
@@ -33,26 +33,27 @@
           <div class="level-left">
             <a class="level-item" aria-label="reply">
               <span class="icon is-small">
-                <i class="fas fa-reply" aria-hidden="true"></i>
+                <i class="fas fa-reply" aria-hidden="false"></i>
               </span>
             </a>
-            {% if g.user['id'] == post['author_id'] %}
 
+            {% if g.user['id'] == post['author_id'] %}
               <a class="action level-item" aria-label="edit" href="{{ url_for('blog.update', id=post['id']) }}">
                 <span class="icon is-small">
-                  <i class="fas fa-edit" aria-hidden="true"></i>
+                  <i class="fas fa-edit" aria-hidden="false"></i>
+                  edit
                 </span>
               </a>
-
             {% endif %}
+
           </div>
         </nav>
       </div>
     </article>
   </div>
-    {% if not loop.last %}
-      <hr>
-    {% endif %}
+    {# {% if not loop.last %} #}
+      {# <hr> #}
+    {# {% endif %} #}
   {% endfor %}
   </div>
 </div>
