@@ -121,3 +121,4 @@ output.txt
 hist.txt
 venv*
 colors
+.idea/
