@@ -23,9 +23,10 @@
         <div class="content">
           <p>
             <h1>{{ post['title'] }}</h1>
+            <div class="block">
             {{ post['body'] }}
-            <br>
-            <strong>-{{ post['username'] }}</strong> <small>{{ post['created']}}</small>
+            </div>
+            <small>-{{ post['username'] }}</small> <small>{{ post['created']}}</small>
           </p>
         </div>
         <nav class="level is-mobile">
