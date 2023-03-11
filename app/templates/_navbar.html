@@ -53,14 +53,14 @@
               <a class="button is-primary" href="{{ url_for('blog.create') }}">
                 {{ g.user['username'] }}
               </a>
-              <a class="button is-light" href="{{ url_for('auth.logout') }}">
+              <a class="button is-danger" href="{{ url_for('auth.logout') }}">
                 logOut
               </a>
             {% else %}
               <a class="button is-primary" href="{{ url_for('auth.register') }}">
                 register
               </a>
-              <a class="button is-light" href="{{ url_for('auth.login') }}">
+              <a class="button is-info" href="{{ url_for('auth.login') }}">
                 logIn
               </a>
               </a>
