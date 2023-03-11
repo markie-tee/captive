@@ -1,15 +1,36 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}New Post{% endblock %}</h1>
+  <section class="section">
+  <h2 class="title is-2">{% block title %}New Post{% endblock %}</h2>
+  </section>
 {% endblock %}
 
 {% block content %}
+  <section class="section">
+  <div class="container"> 
+    <div class="columns is-centered">
+      <div class="column is-half">
   <form method="post">
+    <div class="field">
     <label for="title">Title</label>
-    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+    <div class="control">
+    <input name="title" id="title" class="input" type="text" placeholder="post-title" value="{{ request.form['title'] }}" required>
+    </div>
+    </div>
+    <div class="field">
     <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
-    <input type="submit" value="Save">
+    <div class="control">
+    <textarea name="body" id="body" class="textarea" placeholder="try not to censor" rows="7">{{ request.form['body'] }}</textarea>
+    </div>
+    <br>
+    <div class="control">
+    <input type="submit" class="button is-info" value="Save">
+    </div>
+    </div>
   </form>
+      </div>
+      </div>
+      </div>
+  </section>
 {% endblock %}
