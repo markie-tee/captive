@@ -2,14 +2,13 @@
 <nav class="navbar is-fixed-top has-shadow has-background-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ url_for('blog.index') }}">
-        <img src="{{ url_for('static', filename='logo2.jpg') }}">
+        {% if g.user %}
+          <img src="{{ url_for('static', filename='logoeyes_red.png') }}">
+        {% else %}
+          <img src="{{ url_for('static', filename='logo2.jpg') }}">
+        {% endif %}
         <img src="{{ url_for('static', filename='logo_txt.png') }}">
       </a>
-        {% if g.user %}
-          <div class="container">
-            <small>{{ g.user['username'] }}</small>
-          </div>
-        {% endif %}
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
