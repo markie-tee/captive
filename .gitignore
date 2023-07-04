@@ -5,6 +5,7 @@ iching_venv
 .envrc
 tags
 *.backup
+*.vim
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
