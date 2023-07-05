@@ -28,6 +28,12 @@ def create_app(test_config=None):
     def index():
         return render_template('index.html')
 
+
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
+
+
     from . import db
     db.init_app(app)
 
