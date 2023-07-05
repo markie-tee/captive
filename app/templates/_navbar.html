@@ -1,7 +1,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='navbar.js') }}"></script>
 <nav class="navbar is-fixed-top has-shadow has-background-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{ url_for('blog.index') }}">
+      <a class="navbar-item" href="{{ url_for('index') }}">
         {% if g.user %}
           <img src="{{ url_for('static', filename='logoeyes_red.png') }}">
         {% else %}
@@ -19,7 +19,7 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">STUFF</a>
+        <a class="navbar-item" href="{{ url_for('blog.index') }}">BLOG</a>
 
 
         <div class="navbar-item has-dropdown is-hoverable">
@@ -28,7 +28,7 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a class="navbar-item" href="{{ url_for('about') }}">
               About
             </a>
             <a class="navbar-item">
